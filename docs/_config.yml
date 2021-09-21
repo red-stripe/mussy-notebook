@@ -1,0 +1,40 @@
+title: Mussy Notebook
+short-title: MUS1 # this prepended to the page title
+
+email: red-stripe@users.noreply.github.com
+website: https://red-stripe.github.io/mussy-notebook/
+description: >
+  Lab notebook for mushroom adventures
+
+github_username: red-stripe
+
+permalink: /log/:year_:month/
+
+# Build settings
+markdown: kramdown
+theme: jekyll-lab-notebook
+
+plugins:
+- jekyll-lab-notebook-plugins
+
+jekyll-lab-notebook:
+  home-page:
+    -
+      name: Log
+      is_posts: true
+      hidden: false
+    -
+      name: Protocols
+      dir: 'protocols/'
+      hidden: true
+    -
+      name: Miscellaneous
+      dir: 'random/'
+      hidden: true
+
+# live reload options
+livereload: true
+reload_port: 5678
+
+# prevent jekyll from exploding on Travis
+exclude: [vendor]
